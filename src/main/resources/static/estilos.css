@@ -90,3 +90,15 @@ main {
     border-radius: 4px;
 }
 
+.image-title {
+    text-align: center;
+    font-family: 'Oswald', sans-serif; /* Fuente diferente para los títulos */
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}

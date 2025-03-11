@@ -3,15 +3,46 @@
       xmlns:th="http://www.thymeleaf.org"> 
 <head th:replace="layout/plantilla :: head"> 
     <title>Barber Shop 506 - Página Principal</title>
+
 </head> 
 <body> 
+    
     <header th:replace="layout/plantilla :: header"></header>
     <br></br>
     <h1>La mejor barberia de Costa Rica</h1>
-    <br></br>
-    <p>Tu mejor opcion en cortes</p>
-    <p>No te arriesgues a un mal corte</p>
-    <p>Siempre para complacerte</p>
+    <br>
+        <div class="image-container">
+            <img src="https://www.shutterstock.com/image-illustration/barber-shop-custom-design-wallpaper-600nw-2513553325.jpg" alt="Imagen de la barbería" width="600">
+                <p class="image-title">Nuestra Barbería</p>
+        </div>
+        
+    </br>
+    <p style="text-align: center;">Tu mejor opción en cortes</p>
+    
+    <div class="image-container">
+    <img src="https://i.ytimg.com/vi/WxSuQx1YR3s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB80d16aPsJ6uMwD8EONn8_nUUnJA" alt="Corte de cabello moderno" width="300">
+    <p class="image-title">Corte Moderno</p>
+    </div>
+        
+    <div class="image-container">    
+    <img src="https://saloon.com.mx/revista_digital/wp-content/uploads/2020/04/diccionario.png" alt="Corte de cabello clásico" width="300">
+    <p class="image-title">Corte Clásico</p>
+    </div>
+       
+    <div class="image-container">
+    <img src="https://i.pinimg.com/564x/63/a9/f9/63a9f966053f0ee1e6fdc18d760033a2.jpg" alt="Corte de cabello hombres" width="300">  
+    <p class="image-title">Corte Cabello hombres</p>
+    </div>
+        
+    <div class="image-container">    
+    <img src="https://m.media-amazon.com/images/I/61OkyFNaPFL._AC_UF894,1000_QL80_.jpg" alt="Corte de cabello niños" width="300">    
+    <p class="image-title">Corte Cabello niños</p>
+    </div>    
+        
+        
+    <p style="text-align: center;">No te arriesgues a un mal corte</p>
+    <p style="text-align: center;">Siempre para complacerte</p>
+    <br>
     <br></br>
 
     <footer th:replace="layout/plantilla :: footer"></footer>
