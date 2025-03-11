@@ -8,5 +8,5 @@ import com.barberia.domain.Producto;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ProductoDao extends CrudRepository<Producto, Long> {
-    // Aquí se pueden agregar métodos personalizados si es necesario
+    
 }

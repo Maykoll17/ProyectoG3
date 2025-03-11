@@ -24,12 +24,12 @@ public class ProductoController {
 
     @GetMapping("/productos")
     public String mostrarProductos(Model model) {
-        // Obtener todos los productos desde el servicio
+       
         List<Producto> productos = productoService.obtenerTodosLosProductos();
         
-        // Pasar los productos a la vista
+       
         model.addAttribute("productos", productos);
         
-        return "productos"; // Nombre del archivo HTML que mostrará los productos
+        return "productos"; 
     }
 }
