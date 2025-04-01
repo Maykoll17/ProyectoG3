@@ -24,7 +24,6 @@ public class Producto {
         this.imagen = imagen;
     }
 
-    // Getters y setters
     public Long getId() {
         return id;
     }
