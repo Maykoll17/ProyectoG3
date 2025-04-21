@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <title>Nuestros Cortes - Barber Shop 506</title>
+    <style>
+        .card-title {
+            color: #4b0082;
+            font-weight: 600;
+        }
+        .card-text {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="layout/plantilla :: header"></header>
+
+    <!-- Nuestros Cortes -->
+    <section class="container py-5">
+        <div class="text-center mb-5">
+            <h2 style="color: #A020F0;">Nuestros Cortes</h2>
+            <p class="lead">Explora los estilos que ofrecemos en nuestra barberia</p>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/564x/95/fe/2e/95fe2e1d385889d293e3e462cc76a810.jpg" class="card-img-top" alt="Fade Clásico">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Fade Clasico     ₡3000</h5>
+                        <p class="card-text">Un estilo elegante y atemporal.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/04/1a/8e/041a8ea1d633c9cc343ab35ddb9bc366.jpg" class="card-img-top" alt="Undercut Moderno">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Undercut Moderno     ₡3000</h5>
+                        <p class="card-text">Contraste fuerte con volumen arriba.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/564x/40/e4/5d/40e45d894b8718db423f6316a88683d8.jpg" class="card-img-top" alt="Buzz Cut">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Buzz Cut     ₡2500</h5>
+                        <p class="card-text">Corte militar bajo y facil de mantener.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/736x/49/79/c6/4979c69b8ed2de194588e3fef70de7af.jpg" class="card-img-top" alt="Crew Cut">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Crew Cut     ₡3000</h5>
+                        <p class="card-text">Clasico y profesional para cualquier ocasion.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://cdn.shopify.com/s/files/1/0353/7879/0540/files/TSP-7.jpg?v=1597721909" class="card-img-top" alt="Comb Over">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Comb Over     ₡3500</h5>
+                        <p class="card-text">Un estilo peinado hacia un lado muy versatil.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://i0.wp.com/therighthairstyles.com/wp-content/uploads/2015/10/1-layered-faux-hawk-1.jpg?fit=679%2C849&ssl=1" class="card-img-top" alt="Faux Hawk">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Faux Hawk     ₡2000</h5>
+                        <p class="card-text">Un corte atrevido inspirado en el mohawk.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://lifestylebyps.com/cdn/shop/articles/Low-Drop-Fade-Line-Up-Shiny-Slicked-Back-Top_600x.jpg?v=1552375128" class="card-img-top" alt="Slicked Back">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Slicked Back     ₡2500</h5>
+                        <p class="card-text">Peinado hacia atras para un look pulido.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/048/887/602/small_2x/profile-of-man-with-spiky-blonde-hair-photo.jpg" class="card-img-top" alt="Spiky Hair">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Spiky Hair     ₡3500</h5>
+                        <p class="card-text">Puntas levantadas para un look moderno.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="https://i.pinimg.com/564x/94/d7/40/94d740f7ce11ad76247fba89e50459bd.jpg" class="card-img-top" alt="High Top Fade">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">High Top Fade     ₡5000</h5>
+                        <p class="card-text">Volumen alto con degradado a los lados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>
