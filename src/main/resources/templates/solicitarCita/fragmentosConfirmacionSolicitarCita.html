@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Barber Shop 506 - Confirmación de Cita</title>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"></header>
+
+        <section th:fragment="confirmacion" class="container mt-5 text-center">
+            <h2 style="color: #A020F0;">Acabamos de confirmar su cita</h2>
+            <p style="color: #4b0082;">
+                <span style="font-size: 50px;">✔️</span> Gracias
+            </p>
+            <p th:text="${mensaje}"></p>
+            <div style="margin-top: 20px;">
+                <a href="/" class="btn" style="background-color: #696969; color: white;">Regresar al Inicio</a>
+            </div>
+        </section>
+
+        <footer th:replace="layout/plantilla :: footer"></footer>
+    </body>
+</html>

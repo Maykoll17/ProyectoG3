@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <title>Barber Shop 506 - Estilo y Tradición</title>
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1585747860715-ebba7e41a936');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .btn-booking {
+            background-color: #A020F0;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-booking:hover {
+            background-color: #8A2BE2;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(160, 32, 240, 0.4);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="layout/plantilla :: header"></header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4">Barber Shop 506</h1>
+            <p class="lead">Tradición y estilo en cada corte</p>          
+        </div>
+    </section>
+
+    <!-- Servicios Destacados -->
+    <section class="container py-5">
+        <div class="text-center mb-5">
+            <h2>Tendencias 2025</h2>
+            <p class="lead">Experiencia profesional para tu mejor look</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1" class="card-img-top" alt="Corte clásico">
+                    <div class="card-body">
+                        <h5 class="card-title">Lavados segun tus necesidades</h5>
+                        <p class="card-text">Técnicas tradicionales para un look impecable .</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e" class="card-img-top" alt="Corte moderno">
+                    <div class="card-body">
+                        <h5 class="card-title">Corte Moderno para todos los estilos</h5>
+                        <p class="card-text">Estilos contemporáneos adaptados a tu personalidad.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card service-card h-100">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486" class="card-img-top" alt="Afeitado profesional">
+                    <div class="card-body">
+                        <h5 class="card-title">Afeitado Profesional</h5>
+                        <p class="card-text">Técnica tradicional con toallas calientes y productos premium.</p>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://zaragozaguia.com/wp-content/uploads/2021/06/Las-mejores-barberias-de-Zaragoza.jpg" alt="Nuestra barbería" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>Nuestra Historia</h2>
+                    <p>Desde 2010, Barber Shop 506 ha sido el referente en cortes de cabello y afeitados tradicionales en Costa Rica. Nuestros barberos certificados combinan técnicas clásicas con las últimas tendencias.</p>
+                    <p>Ambiente exclusivo para hombres que valoran el cuidado personal y la atención al detalle.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">¿Listo para tu próxima experiencia de barbería?</h2>
+            <a href="/reservas" class="btn btn-light btn-lg">Reservar ahora</a>
+        </div>
+    </section>
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>

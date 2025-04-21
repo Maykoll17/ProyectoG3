@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout/plantilla :: head">
+        <title>Productos - Barber Shop 506</title>
+        <style>
+            /* Estilo minimalista para las cards */
+            .card {
+                transition: transform 0.2s;
+                border: 1px solid rgba(0,0,0,0.1);
+                margin-bottom: 20px;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            }
+            .card-img-top {
+                height: 180px;
+                object-fit: cover;
+            }
+            .card-title {
+                color: #4b0082;
+                font-weight: 600;
+            }
+            .precio {
+                font-weight: bold;
+                color: #A020F0;
+                font-size: 1.1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header"></header>
+
+        <section class="container mt-5">
+            <h2 style="color: #A020F0;">Nuestros Productos</h2>
+            <div class="row mt-4">
+                
+                <!-- Producto 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://bsecommerceprod.blob.core.windows.net/magento/catalog/product/cache/4d7bf8575b873e81d084ecf5c6c633f2/0/0/0074590551198-a.jpeg" class="card-img-top" alt="Rasuradora">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rasuradora REMINGTON</h5>
+                            <p class="card-text">Rasuradora 3 cuchillas rotativas</p>
+                            <div class="precio mt-auto mb-2">₡40,500</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://media.nidux.net/pull/800/599/10476/474-product-62a7f88cf0461-r27a.jpg" class="card-img-top" alt="Kit barbería">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rasuradora REMINGTON</h5>
+                            <p class="card-text">Rasuradora 3 cuchillas rotativas</p>
+                            <div class="precio mt-auto mb-2">₡55,000</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://ss893.suburbia.com.mx/xl/3783062.jpg" class="card-img-top" alt="Cera para cabello">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Rasuradora TMCO</h5>
+                            <p class="card-text">Rasuradora 3 cuchillas rotativas</p>
+                            <div class="precio mt-auto mb-2">₡90,900</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://siman.vtexassets.com/arquivos/ids/1408551/103325460.jpg?v=637571237678400000" class="card-img-top" alt="Afeitadora eléctrica">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Afeitadora Eléctrica</h5>
+                            <p class="card-text">Afeitadora con múltiples ajustes</p>
+                            <div class="precio mt-auto mb-2">₡72,000</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://vorkbarbier.com/wp-content/uploads/2021/06/AceiteVork_Lavanda.png" class="card-img-top" alt="Aceite para barba">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aceite para Barba</h5>
+                            <p class="card-text">Aceite de lavanda para barba suave</p>
+                            <div class="precio mt-auto mb-2">₡14,900</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://walmartcr.vtexassets.com/arquivos/ids/594543/Aceite-para-Barba-Gillette-con-arg-n-y-vitamina-E-30ml-1-101618.jpg?v=638494296918730000" class="card-img-top" alt="Aceite para barba">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aceite Gillette</h5>
+                            <p class="card-text">Con argán y vitamina E, 30ml</p>
+                            <div class="precio mt-auto mb-2">₡12,500</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://jacarandacr.com/wp-content/uploads/2020/06/Imagen-de-WhatsApp-2023-05-24-a-las-09.16.12.jpg" class="card-img-top" alt="Aceite para barba">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aceite Artesanal</h5>
+                            <p class="card-text">Ingredientes 100% naturales</p>
+                            <div class="precio mt-auto mb-2">₡10,900</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="https://rayitodeluna.mx/wp-content/uploads/2024/08/Aceites-para-barba-1.png" class="card-img-top" alt="Aceite para barba">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Aceite Premium</h5>
+                            <p class="card-text">7 aceites esenciales</p>
+                            <div class="precio mt-auto mb-2">₡16,500</div>
+                            <button class="btn btn-sm btn-outline-primary w-100">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer th:replace="layout/plantilla :: footer"></footer>
+
+        <!-- Script para el botón Comprar -->
+        <script>
+            document.querySelectorAll('.btn-outline-primary').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const card = this.closest('.card');
+                    const productName = card.querySelector('.card-title').textContent;
+                    
+                    // Cambio temporal de estilo
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="bi bi-check-circle"></i> Agregado';
+                    this.classList.remove('btn-outline-primary');
+                    this.classList.add('btn-success');
+                    
+                    // Mensaje en consola (puedes cambiarlo por un toast)
+                    console.log(`Producto agregado: ${productName}`);
+                    
+                    // Volver al estado original después de 2 segundos
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.add('btn-outline-primary');
+                        this.classList.remove('btn-success');
+                    }, 2000);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:fragment="head">
+        <title>Barber Shop 506</title>
+        <meta charset="UTF-8" />
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/rutinas.js}" type="text/javascript"></script>
+        <style>
+            .custom-header {
+                background-color: #A020F0;
+            }
+            .navbar-nav .nav-item {
+                margin: 0 15px;
+            }
+            .content-section {
+                padding: 40px 20px;
+            }
+            .footer {
+                margin-top: 20px;
+                padding: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header th:fragment="header" class="header custom-header">
+            <nav class="navbar navbar-expand-sm navbar-dark p-3">
+                <a class="navbar-brand" href="/">Barber Shop 506</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/"><i class="fas fa-house"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/solicitarCita"><i class="fas fa-cut"></i> Agende su Cita</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/productos"><i class="fas fa-pump-soap"></i> Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cortes"><i class="fas fa-user-tie"></i> Nuestros cortes</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/ubicacion"><i class="fas fa-envelope"></i> Contáctenos</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menú de hamburguesa en la esquina derecha -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSecondary">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSecondary">
+                    <ul class="navbar-nav ms-auto"> 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fas fa-bars"></i> Más Opciones</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" th:href="@{/login}"><i class="fas fa-key"></i> Iniciar sesion</a></li>
+                                <li><a class="dropdown-item" href="/registro/nuevo"><i class="fas fa-file-signature"></i> registrarse</a></li>
+                                <li><a class="dropdown-item" href="/nuestroEquipo"><i class="fas fa-handshake"></i> Nuestros equipo</a></li>
+                                <li><a class="dropdown-item" href="/preguntasFrecuentes"><i class="fas fa-comments"></i> Preguntas frecuentes</a></li>
+                                <li><a class="dropdown-item" href="/sugerencias"><i class="fas fa-box"></i> Sugerencias</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <footer th:fragment="footer" class="footer text-center fixed-bottom bg-dark text-white">
+            <div class="container">
+                <p>&copy; 2025 Barber Shop 506. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </body>
+</html>
+
