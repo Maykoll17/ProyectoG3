@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <title>Preguntas Frecuentes - Barber Shop 506</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .faq-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 60px;
+        }
+        .faq-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            color: white;
+            max-width: 600px;
+            margin-left: 40px;
+        }
+        .faq-title {
+            color: #A020F0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h5 {
+            color: #fff;
+        }
+        .faq-item p {
+            color: #ddd;
+        }
+        .faq-image {
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="layout/plantilla :: header"></header>
+
+    <section class="faq-section">
+
+        <div class="faq-container">
+            <div class="text-center mb-5">
+                <h2 class="faq-title">Preguntas Frecuentes</h2>
+                <p class="lead">Resolvemos tus dudas sobre nuestros servicios y atención</p>
+            </div>
+
+            <div class="faq-item">
+                <h5>¿Necesito agendar una cita o puedo llegar sin aviso?</h5>
+                <p>Recomendamos agendar tu cita para garantizar disponibilidad, aunque aceptamos clientes sin cita según disponibilidad.</p>
+            </div>
+            <div class="faq-item">
+                <h5>¿Qué métodos de pago aceptan?</h5>
+                <p>Aceptamos efectivo, tarjetas de crédito/débito y pagos móviles.</p>
+            </div>
+            <div class="faq-item">
+                <h5>¿Cuánto dura un corte de cabello promedio?</h5>
+                <p>La duración estándar es de 30 a 45 minutos, dependiendo del estilo y servicio solicitado.</p>
+            </div>
+            <div class="faq-item">
+                <h5>¿Ofrecen servicios para niños?</h5>
+                <p>Sí, contamos con cortes adaptados para niños en un ambiente cómodo y seguro.</p>
+            </div>
+            <div class="faq-item">
+                <h5>¿Qué productos utilizan para el cuidado del cabello?</h5>
+                <p>Trabajamos con productos profesionales de alta calidad para el cuidado del cabello y barba.</p>
+            </div>
+            <div class="faq-item">
+                <h5>¿Puedo cancelar o reprogramar mi cita?</h5>
+                <p>Sí, puedes cancelar o reprogramar tu cita con al menos 24 horas de anticipación sin cargos adicionales.</p>
+            </div>
+            <div class="faq-item">
+                <h5>¿Realizan afeitados tradicionales?</h5>
+                <p>Sí, ofrecemos afeitados clásicos con navaja y toallas calientes para una experiencia única.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>
