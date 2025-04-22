@@ -9,8 +9,8 @@ import com.barberia.dao.ProductoDao;
 import com.barberia.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductoServiceImpl implements ProductoService {
@@ -25,5 +25,21 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     public List<Producto> obtenerTodosLosProductos() {
         return (List<Producto>) productoDao.findAll();
+    }
+
+    @Override
+    public Producto guardarProducto(Producto producto) {
+        return productoDao.save(producto);
+    }
+
+    @Override
+    public void eliminarProducto(Long id) {
+        productoDao.deleteById(id);
+    }
+
+    @Override
+    public Producto obtenerProductoPorId(Long id) {
+        Optional<Producto> producto = productoDao.findById(id);
+        return producto.orElse(null);  // Manejar casos donde no se encuentra el producto
     }
 }

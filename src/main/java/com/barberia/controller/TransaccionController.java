@@ -42,7 +42,7 @@ public class TransaccionController {
 
     @PostMapping("/guardar")
     public String guardarTransaccion(@ModelAttribute Transaccion transaccion) {
-        transaccionService.guardar(transaccion);
+        transaccionService.guardarTransaccion(transaccion);
         return "redirect:/transacciones/carrito";
     }
 
