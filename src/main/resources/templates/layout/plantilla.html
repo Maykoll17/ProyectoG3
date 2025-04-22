@@ -68,7 +68,11 @@
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fas fa-bars"></i> Más Opciones</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" th:href="@{/login}"><i class="fas fa-key"></i> Iniciar sesion</a></li>
-                                <li><a class="dropdown-item" href="/registro/nuevo"><i class="fas fa-file-signature"></i> registrarse</a></li>
+                                   <li><a class="dropdown-item" th:href="@{/registro}"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+                                <li><a class="dropdown-item" href="/barberos"><i class="fas fa-users"></i> Barberos</a></li>
+                                <li sec:authorize="hasRole('ADMIN')">
+    <a class="dropdown-item" th:href="@{/admin/barberos}"><i class="fas fa-user-cog"></i> Admin Barberos</a>
+</
                                 <li><a class="dropdown-item" href="/equipo"><i class="fas fa-handshake"></i> Nuestro equipo</a></li>
                                 <li><a class="dropdown-item" href="/preguntasFrecuentes"><i class="fas fa-comments"></i> Preguntas frecuentes</a></li>
                                 <li><a class="dropdown-item" href="/sugerencias"><i class="fas fa-box"></i> Sugerencias</a></li>

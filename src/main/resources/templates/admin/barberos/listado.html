@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <title>Administrar Barberos - Barber Shop 506</title>
+</head>
+<body>
+<header th:replace="layout/plantilla :: header"></header>
+<div class="container mt-5">
+    <h2>Administrar Barberos</h2>
+    <a class="btn btn-primary mb-3" th:href="@{/admin/listadoadmin}">Agregar Barbero</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Experiencia (años)</th>
+                <th>Especialidades</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="barbero : ${barberos}">
+                <td th:text="${barbero.nombre}"></td>
+                <td th:text="${barbero.experiencia}"></td>
+                <td th:text="${barbero.especialidades}"></td>
+                <td>
+                    <a th:href="@{/admin/barberos/modificar/{id}(id=${barbero.id})}" class="btn btn-warning btn-sm">Modificar</a>
+                    <a th:href="@{/admin/barberos/eliminar/{id}(id=${barbero.id})}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>

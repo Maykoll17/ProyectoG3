@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <title>Formulario Barbero - Barber Shop 506</title>
+</head>
+<body>
+<header th:replace="layout/plantilla :: header"></header>
+<div class="container mt-5">
+    <h2 th:text="${barbero.id} != null ? 'Modificar Barbero' : 'Agregar Barbero'"></h2>
+    <form th:action="@{/admin/barberos/guardar}" th:object="${barbero}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" th:field="*{nombre}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="experiencia" class="form-label">Experiencia (años)</label>
+            <input type="number" id="experiencia" th:field="*{experiencia}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="especialidades" class="form-label">Especialidades</label>
+            <input type="text" id="especialidades" th:field="*{especialidades}" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea id="descripcion" th:field="*{descripcion}" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="foto" class="form-label">URL de la Foto</label>
+            <input type="text" id="foto" th:field="*{foto}" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a th:href="@{/admin/barberos}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+<footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>

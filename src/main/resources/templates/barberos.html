@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <title>Nuestros Barberos - Barber Shop 506</title>
+    <style>
+        .barbero-card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .barbero-card:hover {
+            transform: translateY(-5px);
+        }
+        .barbero-card img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+        .barbero-card .card-body {
+            text-align: center;
+        }
+        .list-group-item {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="layout/plantilla :: header"></header>
+
+    <section class="container mt-5">
+        <h2 class="text-center mb-4" style="color:#A020F0;">Nuestro Equipo de Barberos</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" th:each="barbero : ${barberos}">
+                <div class="barbero-card">
+                    <img th:src="${barbero.foto}" alt="Foto del barbero">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${barbero.nombre}"></h5>
+                        <p class="card-text">Experiencia: <span th:text="${barbero.experiencia}"></span> años</p>
+
+                        <!-- Mostrar reseñas -->
+                        <div class="mt-3">
+                            <h6>Reseñas:</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item bg-light" th:each="resena : ${barbero.resenas}">
+                                    <span th:text="${resena.comentario}"></span> - 
+                                    <strong th:text="${resena.calificacion} + '★'"></strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>

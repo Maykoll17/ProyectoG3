@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout/plantilla :: head">
-    <title>Iniciar Sesión - Barber Shop 506</title>
+    <title>Registro de Usuario - Barber Shop 506</title>
     <style>
-        .login-container {
-            max-width: 400px;
+        .registro-container {
+            max-width: 500px;
             margin: 100px auto;
             padding: 30px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 10px;
             background-color: #fff;
         }
-        .login-container h2 {
+        .registro-container h2 {
             text-align: center;
             color: #A020F0;
         }
@@ -20,9 +20,9 @@
 <body>
     <header th:replace="layout/plantilla :: header"></header>
 
-    <div class="login-container">
-        <h2>Iniciar Sesión</h2>
-        <form th:action="@{/login}" method="post">
+    <div class="registro-container">
+        <h2>Registrarse</h2>
+        <form th:action="@{/registro/guardar}" method="post">
             <div class="mb-3">
                 <label for="username" class="form-label">Usuario</label>
                 <input type="text" id="username" name="username" class="form-control" required>
@@ -31,7 +31,11 @@
                 <label for="password" class="form-label">Contraseña</label>
                 <input type="password" id="password" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrar</button>
         </form>
     </div>
 
