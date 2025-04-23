@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <title>Sugerencias - Barber Shop 506</title>
+</head>
+<body>
+<header th:replace="layout/plantilla :: header"></header>
+
+<div class="container mt-5">
+    <h2>Dejanos tu Sugerencia</h2>
+
+    <form th:action="@{/sugerencias/guardar}" method="post" th:object="${sugerencia}">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" th:field="*{nombre}" id="nombre" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" th:field="*{email}" id="email" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea th:field="*{mensaje}" id="mensaje" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <!-- Mensaje de éxito -->
+    <div th:if="${mensajeExito}" class="alert alert-success mt-3" th:text="${mensajeExito}"></div>
+</div>
+
+<footer th:replace="layout/plantilla :: footer"></footer>
+</body>
+</html>

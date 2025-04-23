@@ -1,7 +1,7 @@
 package com.barberia.dao;
 
 import com.barberia.domain.Sugerencia;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SugerenciaDao extends CrudRepository<Sugerencia, Long> {
+public interface SugerenciaDao extends JpaRepository<Sugerencia, Long> {
 }
